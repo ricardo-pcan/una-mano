@@ -1,0 +1,19 @@
+default: &default
+    adapter: postgresql
+    pool: 5
+    timeout: 5000
+    host: unaManoPostgres
+    user: unaMano
+    password: unaMano
+
+development:
+    <<: *default
+    database: una_mano_development
+
+test:
+  <<: *default
+  database: una_mano_test
+
+production:
+  <<: *default
+  database: una_mano_production

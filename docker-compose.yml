@@ -1,0 +1,20 @@
+una_mano_rails:
+    build: .
+    dockerfile: DockerRails
+    hostname: unaManoRails
+    container_name: unaManoRails
+    ports:
+        - "3000:3000"
+    links:
+        - una_mano_postgres
+    volumes:
+        - ./src:/app
+una_mano_postgres:
+    image: postgres:9.4
+    hostname: unaManoPostgres
+    container_name: unaManoPostgres
+    ports:
+        - "5432"
+    environment:
+        POSTGRES_PASSWORD: unaMano
+        POSTGRES_USER: unaMano
