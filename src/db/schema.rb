@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160403033855) do
+ActiveRecord::Schema.define(version: 20160403151005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 20160403033855) do
     t.string   "password",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "documents", force: :cascade do |t|
+    t.string   "name",                 null: false
+    t.string   "path",                 null: false
+    t.integer  "project_id", limit: 8, null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "entrepreneurs", force: :cascade do |t|
@@ -48,14 +56,6 @@ ActiveRecord::Schema.define(version: 20160403033855) do
     t.integer  "entrepreneur_applicant_id", limit: 8, null: false
     t.integer  "entrepreneur_applied_id",   limit: 8, null: false
     t.integer  "project_id",                limit: 8, null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "files", force: :cascade do |t|
-    t.string   "name",                 null: false
-    t.string   "path",                 null: false
-    t.integer  "project_id", limit: 8, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(version: 20160403033855) do
     t.datetime "updated_at"
   end
 
-  add_foreign_key "files", "projects"
+  add_foreign_key "documents", "projects"
   add_foreign_key "institutions", "admins"
   add_foreign_key "photos", "projects"
   add_foreign_key "projects", "entrepreneurs"
