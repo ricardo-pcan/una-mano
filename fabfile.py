@@ -63,6 +63,25 @@ def rake( action ):
         local ( "sudo docker exec -it unaManoRails rake " + action )
 
 @task
+def rails( action ):
+    """
+    Run rails action within unaManoRails container
+    """
+    if( not action ):
+        print "The action is required param.."
+    else:
+        print "Run " + action
+        local ( "sudo docker exec -it unaManoRails rails " + action )
+
+@task
+def rspec( action="-h" ):
+    """
+    Run rspec action within unaManoRails container
+    """
+    print "Run " + action
+    local ( "sudo docker exec -it unaManoRails rspec " + action )
+
+@task
 def db_create():
     """
     Run db:create within unaManoRails container
