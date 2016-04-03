@@ -78,4 +78,11 @@ def migrate():
     print "Run db migrate ..."
     local( "sudo docker exec -it unaManoRails rake db:migrate" )
 
+@task
+def create_migration(name):
+    """
+     Create rails migration
+    """
+    print "Run rails create migration ..."
+    local("sudo docker exec -it unaManoRails rails generate migration " + name )
 
