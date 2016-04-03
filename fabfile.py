@@ -86,3 +86,10 @@ def create_migration(name):
     print "Run rails create migration ..."
     local("sudo docker exec -it unaManoRails rails generate migration " + name )
 
+@task
+def create_model(name):
+    """
+     Create rails migration
+    """
+    print "Run rails create migration ..."
+    local("sudo docker exec -it unaManoRails rails generate model " + name )
