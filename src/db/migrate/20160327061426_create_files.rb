@@ -1,8 +1,9 @@
 class CreateFiles < ActiveRecord::Migration
   def up
     create_table :files do |t|
-      t.string name, null: false
-      t.string path, null: false
+      t.string :name, null: false
+      t.string :path, null: false
+      t.bigint :project_id, null: false
       t.timestamps
     end
 

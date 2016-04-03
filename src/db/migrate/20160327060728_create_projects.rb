@@ -4,6 +4,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :name, null:false
       t.string :video_path, null: true
       t.text :description, null: false
+      t.bigint :entrepreneur_id
       t.timestamps
     end
     add_foreign_key :projects, :entrepreneurs

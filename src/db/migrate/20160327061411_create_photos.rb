@@ -1,8 +1,9 @@
 class CreatePhotos < ActiveRecord::Migration
   def up
     create_table :photos do |t|
-      t.string name, null: true
-      t. string path, null:false
+      t.string :name, null: true
+      t. string :path, null:false
+      t.bigint :project_id, null: false
       t.timestamps
     end
     add_foreign_key :photos, :projects
@@ -11,4 +12,5 @@ class CreatePhotos < ActiveRecord::Migration
   def down
     remove_foreign_key :photos, :projects
     drop_table :photos
+  end
 end
