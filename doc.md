@@ -58,3 +58,7 @@ Aunque el proyecto tenga un perfil definido no quiere decir que solo usuarios co
 * **Video**: Esta entidad es la encargada de guardar los links de los videos del proyecto.
 
 
+## Behavior description
+### Intitutions:
+* Una institución debe ser creada por un admin.
+* Una institución debe tener un alias y este no debe rebasar los 20 caracteres ni puede ser nulo
