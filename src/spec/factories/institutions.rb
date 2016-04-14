@@ -10,6 +10,7 @@ FactoryGirl.define do
     name "Universidad Autónoma del Estado de México"
     admin
     institution_alias "Hola"
+    image_profile_path "http://miweb.com/image.jpeg"
 
 
     trait :name_null do
@@ -70,5 +71,17 @@ FactoryGirl.define do
       institution_alias "a" * 15
     end
 
+    # Image profile factories
+    trait :with_image_profile do
+      image_profile_path "http://miweb.com/image"
+    end
+
+    trait :without_image_profile do
+      image_profile_path nil
+    end
+
+    trait :with_image_profile_path_less_10 do
+      image_profile_path "a" * 9
+    end
   end
 end

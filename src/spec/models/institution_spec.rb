@@ -3,10 +3,11 @@ require "institution"
 
 RSpec.describe Institution, type: :model do
 
-  it "has name" do
+  it "hasnt name" do
     institution = build(:institution, :name_null)
     institution.should_not be_valid
   end
+
 
   it "has_name_greater_than_four_caracters" do
     institution = build( :institution, :name_two_characters )
@@ -67,5 +68,27 @@ RSpec.describe Institution, type: :model do
     institution = build( :institution, :alias_less_than_20_char )
     institution.should be_valid
   end
+
+  it "could has image profile" do
+    institution = build( :institution, :with_image_profile )
+    institution.should be_valid
+  end
+
+  it "could has not image profile" do
+    institution = build( :institution, :without_image_profile )
+    institution.should be_valid
+  end
+
+  it "could has not image profile path less than 10 chars" do
+    institution = build( :institution, :with_image_profile_path_less_10 )
+    institution.should_not be_valid
+  end
+
+  it "could create" do
+    institution = create( :institution )
+    institution.should be_valid
+  end
+
+  it { should belong_to(:admin) }
 
 end

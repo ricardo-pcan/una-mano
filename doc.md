@@ -62,3 +62,4 @@ Aunque el proyecto tenga un perfil definido no quiere decir que solo usuarios co
 ### Intitutions:
 * Una institución debe ser creada por un admin.
 * Una institución debe tener un alias y este no debe rebasar los 20 caracteres ni puede ser nulo
+* Una institución puede o no tener una imagen de perfil.
