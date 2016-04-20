@@ -63,3 +63,10 @@ Aunque el proyecto tenga un perfil definido no quiere decir que solo usuarios co
 * Una institución debe ser creada por un admin.
 * Una institución debe tener un alias y este no debe rebasar los 20 caracteres ni puede ser nulo
 * Una institución puede o no tener una imagen de perfil.
+
+### Emprendedores
+* Un emprendedor debe tener un nombre y apellido
+* El nombre y el apellido no deben rebasar los 100 caracteres
+* El emprendedor debe tener una fecha de nacimiento válida
+* El emprendedor no puede ser menor de 10 años
+* El emprendedor debe tene run nombre de usuario y este debe ser único
