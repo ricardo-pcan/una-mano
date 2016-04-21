@@ -2,9 +2,9 @@ FactoryGirl.define do
   factory :entrepreneur do
     name "Ricardo Alberto"
     last_names "Perez"
-    birthdate "12/02/2016"
-    #email ""
-    #username ""
+    birthdate "2001/12/23"
+    email "ricardo@correo.com"
+    username "ripper"
     #web_site_url ""
     #twitter ""
     #facebook ""
@@ -12,7 +12,7 @@ FactoryGirl.define do
     #instagram ""
     #cellphone ""
     #interests ""
-    #password ""
+    password "123456"
 
     trait :without_name do
       name nil
@@ -55,11 +55,31 @@ FactoryGirl.define do
     end
 
     trait :greater_than_10_years do
-      birthdate "23/12/2006"
+      birthdate "1992/12/23"
     end
 
     trait :less_than_10_years do
-      birthdate "23/12/2009"
+      birthdate "2009/12/23"
+    end
+
+    trait :with_username do
+      username "ripper"
+    end
+
+    trait :without_username do
+      username nil
+    end
+
+    trait :with_username_greater_than_30 do
+      username "a" * 31
+    end
+
+    trait :with_username_less_than_30 do
+      username "a" * 29
+    end
+
+    trait :username_ripper do
+      username "ripper"
     end
 
   end

@@ -70,3 +70,4 @@ Aunque el proyecto tenga un perfil definido no quiere decir que solo usuarios co
 * El emprendedor debe tener una fecha de nacimiento válida
 * El emprendedor no puede ser menor de 10 años
 * El emprendedor debe tene run nombre de usuario y este debe ser único
+El emprendedor debe tener un nombre de usuario que no rebase los 30 chars
