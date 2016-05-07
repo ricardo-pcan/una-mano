@@ -116,7 +116,7 @@
     <column id="COL32" populated="true" UUID="ff115d0f-6354-4d0e-8d1b-912645659a46" autoIncrement="false" autoIncrementSequenceName="institutions_alias_seq" defaultValue="" name="alias" nullable="1" physicalName="alias" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL33" populated="true" UUID="c93a61b5-d280-49cc-bfde-291fa41e504d" autoIncrement="false" autoIncrementSequenceName="institutions_image_profile_seq" defaultValue="" name="image_profile" nullable="1" physicalName="image_profile" precision="200" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL33" populated="true" UUID="c93a61b5-d280-49cc-bfde-291fa41e504d" autoIncrement="false" autoIncrementSequenceName="institutions_image_profile_path_seq" defaultValue="" name="image_profile_path" nullable="1" physicalName="image_profile_path" precision="200" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
     <column id="COL34" populated="true" UUID="ced42c24-90bd-4ba6-affd-4c3e81c816a3" autoIncrement="false" autoIncrementSequenceName="institutions_ubication_seq" defaultValue="" name="ubication" nullable="0" physicalName="ubication" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
