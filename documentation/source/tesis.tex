@@ -1,0 +1,95 @@
+\documentclass[oneside,numbers,spanish]{./ezthesis}
+%% # Opciones disponibles para el documento #
+%%
+%% Las opciones con un (*) son las opciones predeterminadas.
+%%
+%% Modo de compilar:
+%%   draft            - borrador con marcas de fecha y sin im'agenes
+%%   draftmarks       - borrador con marcas de fecha y con im'agenes
+%%   final (*)        - version final de la tesis
+%%
+%% Tama'no de papel:
+%%   letterpaper (*)  - tama'no carta (Am'erica)
+%%   a4paper          - tama'no A4    (Europa)
+%%
+%% Formato de impresi'on:
+%%   oneside          - hojas impresas por un solo lado
+%%   twoside (*)      - hijas impresas por ambos lados
+%%
+%% Tama'no de letra:
+%%   10pt, 11pt, o 12pt (*)
+%%
+%% Espaciado entre renglones:
+%%   singlespace      - espacio sencillo
+%%   onehalfspace (*) - espacio de 1.5
+%%   doublespace      - a doble espacio
+%%
+%% Formato de las referencias bibliogr'aficas:
+%%   numbers          - numeradas, p.e. [1]
+%%   authoryear (*)   - por autor y a'no, p.e. (Newton, 1997)
+%%
+%% Opciones adicionales:
+%%   spanish         - tesis escrita en espa'nol
+%%
+%% Desactivar opciones especiales:
+%%   nobibtoc   - no incluir la bibiolgraf'ia en el 'Indice general
+%%   nofancyhdr - no incluir "fancyhdr" para producir los encabezados
+%%   nocolors   - no incluir "xcolor" para producir ligas con colores
+%%   nographicx - no incluir "graphicx" para insertar gr'aficos
+%%   nonatbib   - no incluir "natbib" para administrar la bibliograf'ia
+
+%% Paquetes adicionales requeridos se pueden agregar tambi'en aqu'i.
+%% Por ejemplo:
+%\usepackage{subfig}
+%\usepackage{multirow}
+
+%% # Datos del documento #
+%% Nota que los acentos se deben escribir: \'a, \'e, \'i, etc.
+%% La letra n con tilde es: \~n.
+
+
+% University Data
+\institution{Universidad Aut\'onoma del Estado de M\'exico}
+\campus{Centro Universitario UAEM Texcoco}
+\institutionImage{assets/images/general/UAEM}
+%\faculty{}
+\department{Departamento de Sistemas Computacionales}
+
+% Student Data
+\author{Ricardo Alberto P\'erez Candelas}
+\title{Implementaci\'on de un caso de estudio con Testing Driven Development}
+
+% General Data
+\documentType{Protocolo de Tesis}
+\degree{Ingeniero en Computaci\'on}
+\supervisor{Irene Aguilar Juar\'ez}
+
+%\geometry{top=40mm,bottom=33mm,inner=40mm,outer=25mm}
+
+\hyperlinking
+\begin{document}
+
+\include{./titlepage}
+
+
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+% Chapters
+\input{./chapters/one}
+\input{./chapters/two}
+\input{./chapters/three}
+\input{./chapters/four}
+\input{./chapters/five}
+\input{./chapters/six}
+\input{./chapters/seven}
+\input{./chapters/eight}
+
+
+
+\appendix
+
+\bibliography{biblio}
+
+\end{document}
