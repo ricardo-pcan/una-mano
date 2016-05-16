@@ -112,3 +112,12 @@ def create_model(name):
     """
     print "Run rails create migration ..."
     local("sudo docker exec -it unaManoRails rails generate model " + name )
+
+@task
+def compile_latex(doc="latex.tex"):
+    """
+    Compile my latex doc
+    """
+    # print "Compile tesis doc"
+    local("pdflatex -output-dir=../build " + doc)
+
