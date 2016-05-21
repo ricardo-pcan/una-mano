@@ -1,1 +1,57 @@
 \chapter{Metodolog'ia}
+
+El \textit{Testing Driven Development} o \textit{TDD} es un proceso de dise\~no e implementaci\'on de software que se encuentra dentro de la metodolog\'ia XP \textit{( Extreme Programing )} que fue creada por Kent Beck.
+
+Esta m\'etodolog\'ia abstrae a un sistema complejo como un conjunto de m\'odulos que a su vez poseen requerimientos que deben ser cumplidos dado el modelode negocio del sistema;
+estos puntos son equivalentes lo que se realiza en la etapa de an\'alisis de requerimientos de software en las m\'etodologias de desarrollo de software tradicionales como
+\textit{Cascada}.
+
+En general se ataca el problema mediante la disminuci\'on de complejidad mediante la modularizaci\'on del problema.
+
+
+Una vez teniendo bien definidos los requerimientos y m\'odulos a atacar se procede con ul algoritmo de 3 pasos que en esencia son estos 3:
+\begin{enumerate}
+    \item Escribir el test basado en la especificación del requisito.
+    \item Implementar el c\'odigo que cubre la especificaci\'on del requerimiento.
+    \item Refactorizar o mejorar el c\'odigode producci\'on
+\end{enumerate}
+
+En cada paso del algoritmo se espera un estado definido que son los siguientes:
+\begin{enumerate}
+    \item Rojo.
+    \item Verde.
+    \item Aunque este paso no sea representado en el estandar del algoritmo original para este trabajo yo lo tomare como Amarillo.
+\end{enumerate}
+
+De manera muy general los estados del algoritmo son los siguientes.
+
+\section{Test o Rojo}
+En este paso se toman los requerimientos del sitema en forma de premisas de tal manera que puedan expresarse en código utilizando algún framework de pruebas.
+Esto es, escribir mediante sentencias de código lo que esperamos del m\'odulo evaluado en el sistema, por ejemplo; en el m\'odulo de alumnos se requiere que el nombre sea
+un dato requerido o se requiere que la edad sea mayor a 10 a\~nos.
+
+Esta fase retornará un falló a la hora de correr las pruebas y en realidad eso es lo esperado ya que por defecto el sistema a\'un no esta capacitado para poder responder ante este
+requerimiento.
+
+Este punto sirve como base para que el desarrollador tenga conocimiento de las limitaciones que tiene el sistema comparado contra los requerimientos que se esperan.
+
+\section{Codificaci\'on o Verde}
+
+Esta es la parta del algoritmo en la que se escribe el código que hace satisfacer el requerimiento antes escrito; en esta fase los autores recomiendan escribir el mínimo c\'odigo que satisfaga
+el requerimiento y solo el requerimiento tratado. En este punto no importa de que manera se trate de atacar el problema en la codificaci\'on ya que este se mejorar\'a en la etapa de refactorizaci\'on.
+
+Ya que uno de los principios es modularizar el sistema y atacarlo de esta manera, se recomienda no utilizar m\'odulos externos o crear dependencias hacia m\'odulos externos al que se
+esta tratando.
+
+\section{Refactorizar o Amarillo}
+Esta es la etapa en la que se mejora el c\'odigo creado en la fase de codificaci\'on. En general se buscan que el c\'odigo respete los siguientes puntos:
+
+\begin{itemize}
+    \item Que no halla c\'odigo duplicado
+    \item Respetar la identaci\'on
+    \item No hacer uso de m\'odulos externos
+    \item Aunque las pruebas en si representan una muy buena forma de documentaci\'on nunca se debe descartar la idea de documentar tu c\'odigo respetando los
+        estandares del lenguaje que ocupas.
+\end{itemize}
+
+La refactorización debe no modificar el funcionamiento creado de ninguna manera.
