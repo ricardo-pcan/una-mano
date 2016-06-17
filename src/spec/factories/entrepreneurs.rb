@@ -5,6 +5,7 @@ FactoryGirl.define do
     birthdate "2001/12/23"
     email "ricardo@correo.com"
     username "ripper"
+    profile_image "/var/log/http/hola.png"
     #web_site_url ""
     #twitter ""
     #facebook ""
@@ -80,6 +81,46 @@ FactoryGirl.define do
 
     trait :username_ripper do
       username "ripper"
+    end
+
+    trait :without_profile_image do
+      profile_image  nil
+    end
+
+    trait :profile_image_svg do
+      profile_image "hola.svg"
+    end
+
+    trait :profile_image_jpg do
+      profile_image "hola.jpg"
+    end
+
+    trait :profile_image_jpeg do
+      profile_image "hola.jpeg"
+    end
+
+    trait :profile_image_png do
+      profile_image "hola.png"
+    end
+
+    trait :profile_image_mp3 do
+      profile_image "hola.mp3"
+    end
+
+    trait :profile_image_docx do
+      profile_image "hola.docx"
+    end
+
+    trait :profile_image_txt do
+      profile_image "hola.txt"
+    end
+
+    trait :profile_image_nil_extension do
+      profile_image "hola"
+    end
+
+    trait :without_web_site do
+      web_site_url nil
     end
 
   end

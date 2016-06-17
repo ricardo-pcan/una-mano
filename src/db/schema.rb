@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160412040014) do
+ActiveRecord::Schema.define(version: 20160617024010) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,11 +33,11 @@ ActiveRecord::Schema.define(version: 20160412040014) do
   end
 
   create_table "entrepreneurs", force: :cascade do |t|
-    t.string   "name",         null: false
-    t.string   "last_names",   null: false
-    t.string   "email",        null: false
-    t.string   "username",     null: false
-    t.string   "password",     null: false
+    t.string   "name",          null: false
+    t.string   "last_names",    null: false
+    t.string   "email",         null: false
+    t.string   "username",      null: false
+    t.string   "password",      null: false
     t.string   "web_site_url"
     t.string   "facebook"
     t.string   "linkedin"
@@ -45,9 +45,10 @@ ActiveRecord::Schema.define(version: 20160412040014) do
     t.string   "instagram"
     t.string   "cellphone"
     t.text     "interests"
-    t.datetime "birthdate",    null: false
+    t.datetime "birthdate",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "profile_image"
   end
 
   create_table "entrepreneurs_interested_entrepreneurs", force: :cascade do |t|

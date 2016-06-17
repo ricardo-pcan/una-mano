@@ -89,4 +89,56 @@ RSpec.describe Entrepreneur, type: :model do
     entrepreneur_2.should_not be_valid
   end
 
+  it "s image_profile can be nil" do
+    entrepreneur = create( :entrepreneur, :without_profile_image )
+    entrepreneur.should be_valid
+  end
+
+  it"s image profile could be jpg" do
+    entrepreneur = build( :entrepreneur, :profile_image_jpg )
+    entrepreneur.should be_valid
+  end
+
+  it"s image profile could be jpeg" do
+    entrepreneur = build( :entrepreneur, :profile_image_jpeg )
+    entrepreneur.should be_valid
+  end
+
+  it"s image profile could be png" do
+    entrepreneur = build( :entrepreneur, :profile_image_png )
+    entrepreneur.should be_valid
+  end
+
+  it"s image profile couldn't be svg" do
+    entrepreneur = build( :entrepreneur, :profile_image_svg )
+    entrepreneur.should_not be_valid
+  end
+
+  it"s image profile couldn't be mp3" do
+    entrepreneur = build( :entrepreneur, :profile_image_mp3 )
+    entrepreneur.should_not be_valid
+  end
+
+  it"s image profile couldn't be docx" do
+    entrepreneur = build( :entrepreneur, :profile_image_docx )
+    entrepreneur.should_not be_valid
+  end
+
+  it"s image profile couldn't be txt" do
+    entrepreneur = build( :entrepreneur, :profile_image_txt )
+    entrepreneur.should_not be_valid
+  end
+
+  it"s image profile couldn't be extension null" do
+    entrepreneur = build( :entrepreneur, :profile_image_nil_extension )
+    entrepreneur.should_not be_valid
+  end
+
+  it "s web site url could be nil" do
+    entrepreneur = build( :entrepreneur, :without_web_site )
+    entrepreneur.should be_valid
+  end
+
+
+
 end
