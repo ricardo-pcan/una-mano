@@ -1,4 +1,5 @@
 FactoryGirl.define do
+
   factory :entrepreneur do
     name "Ricardo Alberto"
     last_names "Perez"
@@ -6,9 +7,10 @@ FactoryGirl.define do
     email "ricardo@correo.com"
     username "ripper"
     profile_image "/var/log/http/hola.png"
-    #web_site_url ""
-    #twitter ""
+    web_site_url "https://github.com/"
+    twitter "@ricardo_pcan"
     #facebook ""
+    institution
     #linkedin ""
     #instagram ""
     #cellphone ""
@@ -123,5 +125,42 @@ FactoryGirl.define do
       web_site_url nil
     end
 
+    trait :with_web_site_url_invalid do
+      web_site_url "h:yuipk"
+    end
+
+    trait :without_twitter do
+      twitter nil
+    end
+
+    trait :with_twitter_invalid do
+      twitter "h:yuipk"
+    end
+
+    trait :without_facebook do
+      facebook nil
+    end
+
+    trait :without_linkedin do
+      linkedin nil
+    end
+
+    trait :without_instagram do
+      instagram nil
+    end
+
+    trait :without_cellphone do
+      cellphone nil
+    end
+
+    trait :with_institution do
+      institution
+    end
+
+    trait :without_institution do
+      institution nil
+    end
+
   end
+
 end

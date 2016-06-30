@@ -139,6 +139,45 @@ RSpec.describe Entrepreneur, type: :model do
     entrepreneur.should be_valid
   end
 
+  it "s web site url must be a valid url" do
+    entrepreneur = build( :entrepreneur, :with_web_site_url_invalid )
+    entrepreneur.should_not be_valid
+  end
+
+  it "s twitter could be nil" do
+    entrepreneur = build( :entrepreneur, :without_twitter )
+    entrepreneur.should be_valid
+  end
+
+  it "s twitter must be valid twitter" do
+    entrepreneur = build( :entrepreneur, :with_twitter_invalid )
+    entrepreneur.should_not be_valid
+  end
+
+  it "s facebook could be nil" do
+    entrepreneur = build( :entrepreneur, :without_facebook )
+    entrepreneur.should be_valid
+  end
+
+  it "s linkedin could be nil" do
+    entrepreneur = build( :entrepreneur, :without_linkedin )
+    entrepreneur.should be_valid
+  end
+
+  it "s instagram could be nil" do
+    entrepreneur = build( :entrepreneur, :without_instagram )
+    entrepreneur.should be_valid
+  end
+
+  it "s cellphone could be nil" do
+    entrepreneur = build( :entrepreneur, :without_cellphone )
+    entrepreneur.should be_valid
+  end
+  
+  it "must belongs to an institution" do
+    entrepreneur = build( :entrepreneur, :with_institution )
+    entrepreneur.should be_valid
+  end
 
 
 end

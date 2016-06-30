@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160617024010) do
+ActiveRecord::Schema.define(version: 20160630031241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,11 +33,11 @@ ActiveRecord::Schema.define(version: 20160617024010) do
   end
 
   create_table "entrepreneurs", force: :cascade do |t|
-    t.string   "name",          null: false
-    t.string   "last_names",    null: false
-    t.string   "email",         null: false
-    t.string   "username",      null: false
-    t.string   "password",      null: false
+    t.string   "name",                     null: false
+    t.string   "last_names",               null: false
+    t.string   "email",                    null: false
+    t.string   "username",                 null: false
+    t.string   "password",                 null: false
     t.string   "web_site_url"
     t.string   "facebook"
     t.string   "linkedin"
@@ -45,10 +45,11 @@ ActiveRecord::Schema.define(version: 20160617024010) do
     t.string   "instagram"
     t.string   "cellphone"
     t.text     "interests"
-    t.datetime "birthdate",     null: false
+    t.datetime "birthdate",                null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "profile_image"
+    t.integer  "institution_id", limit: 8, null: false
   end
 
   create_table "entrepreneurs_interested_entrepreneurs", force: :cascade do |t|
@@ -97,6 +98,7 @@ ActiveRecord::Schema.define(version: 20160617024010) do
   end
 
   add_foreign_key "documents", "projects"
+  add_foreign_key "entrepreneurs", "institutions"
   add_foreign_key "institutions", "admins"
   add_foreign_key "photos", "projects"
   add_foreign_key "projects", "entrepreneurs"
