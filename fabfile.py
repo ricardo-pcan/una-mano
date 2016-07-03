@@ -114,10 +114,18 @@ def create_model(name):
     local("sudo docker exec -it unaManoRails rails generate model " + name )
 
 @task
-def compile_latex(doc="latex.tex"):
+def compile_protocol(doc="latex.tex"):
     """
-    Compile my latex doc
+    Compile my latex protocol doc
     """
     # print "Compile tesis doc"
-    local("pdflatex -output-dir=../build " + doc)
+    local("pdflatex -output-dir=../../build/protocol " + doc)
+
+@task
+def compile_tesis(doc="tesis.tex"):
+    """
+    Compile my latex tesis doc
+    """
+    # print "Compile tesis doc"
+    local("pdflatex -output-dir=../../build/tesis " + doc)
 
