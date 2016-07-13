@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160630031241) do
+ActiveRecord::Schema.define(version: 20160710005901) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20160630031241) do
     t.datetime "updated_at"
     t.string   "profile_image"
     t.integer  "institution_id", limit: 8, null: false
+    t.integer  "profile_id",     limit: 8, null: false
   end
 
   create_table "entrepreneurs_interested_entrepreneurs", force: :cascade do |t|
@@ -99,6 +100,7 @@ ActiveRecord::Schema.define(version: 20160630031241) do
 
   add_foreign_key "documents", "projects"
   add_foreign_key "entrepreneurs", "institutions"
+  add_foreign_key "entrepreneurs", "profiles"
   add_foreign_key "institutions", "admins"
   add_foreign_key "photos", "projects"
   add_foreign_key "projects", "entrepreneurs"

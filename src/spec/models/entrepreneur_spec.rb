@@ -173,11 +173,28 @@ RSpec.describe Entrepreneur, type: :model do
     entrepreneur = build( :entrepreneur, :without_cellphone )
     entrepreneur.should be_valid
   end
-  
+
   it "must belongs to an institution" do
     entrepreneur = build( :entrepreneur, :with_institution )
     entrepreneur.should be_valid
   end
+
+  it "must belongs to a profile" do
+    entrepreneur = build( :entrepreneur, :with_profile )
+    entrepreneur.should be_valid
+  end
+
+  it "s profile could not be nil" do
+    entreprenur = build( :entrepreneur, :without_profile )
+    entreprenur.should_not be_valid
+    expect( entrepreneur ).to be_valid
+  end
+
+  it "could be valid entrepreeur" do
+    entrepreneur = create( :entrepreneur )
+    expect( entrepreneur ).to be_valid
+  end
+
 
 
 end

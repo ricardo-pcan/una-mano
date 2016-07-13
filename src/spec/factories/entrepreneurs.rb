@@ -10,6 +10,7 @@ FactoryGirl.define do
     web_site_url "https://github.com/"
     twitter "@ricardo_pcan"
     #facebook ""
+    profile
     institution
     #linkedin ""
     #instagram ""
@@ -159,6 +160,14 @@ FactoryGirl.define do
 
     trait :without_institution do
       institution nil
+    end
+
+    trait :with_profile do
+      profile
+    end
+
+    trait :without_profile do
+      profile nil
     end
 
   end

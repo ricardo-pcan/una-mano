@@ -7,6 +7,10 @@ class Entrepreneur < ActiveRecord::Base
   validates :profile_image, presence: false, allow_blank: true, image: true
   validates :web_site_url, url: true, presence: false, allow_blank: true
   validates :twitter, presence: false, allow_blank: true, twitter: true
+  validates :profile_id, presence: true
 
   belongs_to :institution
+  belongs_to :profile
+
+
 end
