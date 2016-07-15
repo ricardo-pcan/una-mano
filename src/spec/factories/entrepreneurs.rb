@@ -9,13 +9,8 @@ FactoryGirl.define do
     profile_image "/var/log/http/hola.png"
     web_site_url "https://github.com/"
     twitter "@ricardo_pcan"
-    #facebook ""
     profile
     institution
-    #linkedin ""
-    #instagram ""
-    #cellphone ""
-    #interests ""
     password "123456"
 
     trait :without_name do
