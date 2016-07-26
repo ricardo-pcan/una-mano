@@ -165,6 +165,13 @@ FactoryGirl.define do
       profile nil
     end
 
+    factory :entrepreneur_with_projects do
+      after(:create) do |entrepreneur|
+        create( :project_taka, entrepreneur: entrepreneur )
+        create( :project_hebi, entrepreneur: entrepreneur )
+      end
+    end
+
   end
 
 end

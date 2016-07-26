@@ -194,6 +194,10 @@ RSpec.describe Entrepreneur, type: :model do
     expect( entrepreneur ).to be_valid
   end
 
+  it "entrepreneur can create projects" do
+    entrepreneur = create( :entrepreneur_with_projects )
+    expect( entrepreneur ).to be_valid
+  end
 
 
 end

@@ -11,6 +11,7 @@ class Entrepreneur < ActiveRecord::Base
 
   belongs_to :institution
   belongs_to :profile
+  has_many :projects
 
 
 end
